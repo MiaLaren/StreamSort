@@ -4,6 +4,8 @@
 #include <vector>
 #include <string>
 
+
+
 class StreamQueue {
 private:
     std::vector<std::string> titles;
@@ -21,5 +23,7 @@ public:
     double sumRatings(int index) const;
     int findHighest(int index) const;
 };
+
+
 
 #endif

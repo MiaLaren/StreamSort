@@ -3,12 +3,15 @@
 #include <stdexcept>
 #include <cctype>
 
+
+
 // helper- convert the  string to lowercase
 static std::string toLower(const std::string& s) {
     std::string result = s;
     for (char& c : result) c = std::tolower(c);
     return result;
 }
+
 
 void StreamQueue::addShow(const std::string& title, double rating) {
     if (rating < 0.0 || rating > 10.0) {
@@ -19,6 +22,7 @@ void StreamQueue::addShow(const std::string& title, double rating) {
     ratings.push_back(rating);
 }
 
+
 void StreamQueue::removeShow(int index) {
     if (index < 0 || index >= (int)titles.size()) {
         throw std::out_of_range("Invalid index");
@@ -27,6 +31,7 @@ void StreamQueue::removeShow(int index) {
     titles.erase(titles.begin() + index);
     ratings.erase(ratings.begin() + index);
 }
+
 
 void StreamQueue::displayAll() const {
     if (titles.empty()) {
@@ -39,6 +44,8 @@ void StreamQueue::displayAll() const {
                   << " (" << ratings[i] << ")\n";
     }
 }
+
+
 
 void StreamQueue::sortByRating() {
     for (int i = 0; i < (int)ratings.size() - 1; i++) {
@@ -55,6 +62,8 @@ void StreamQueue::sortByRating() {
     }
 }
 
+
+
 void StreamQueue::searchByTitle(const std::string& title) const {
     std::string target = toLower(title);
 
@@ -70,12 +79,14 @@ void StreamQueue::searchByTitle(const std::string& title) const {
 }
 
 
+
 double StreamQueue::sumRatings(int index) const {
     if (index >= (int)ratings.size()) {
         return 0.0;
     }
     return ratings[index] + sumRatings(index + 1);
 }
+
 
 
 int StreamQueue::findHighest(int index) const {
@@ -90,3 +101,7 @@ int StreamQueue::findHighest(int index) const {
     }
     return bestInRest;
 }
+
+
+
+
