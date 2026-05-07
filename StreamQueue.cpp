@@ -1,3 +1,16 @@
+// =====================================================
+
+// Name: Mia Santos
+
+// Course: ITSE 2359 C++ Programming
+
+// Project: StreamSort++ (Units 14-16 Integration)
+
+// File: StreamQueue.cpp
+
+// =====================================================
+
+
 #include "StreamQueue.h"
 #include <iostream>
 #include <stdexcept>

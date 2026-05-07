@@ -1,3 +1,16 @@
+// =====================================================
+
+// Name: Mia Santos
+
+// Course: ITSE 2359 C++ Programming
+
+// Project: StreamSort++ (Units 14-16 Integration)
+
+// File: main.cpp
+
+// =====================================================
+
+
 #include <iostream>
 #include <limits>
 #include "StreamQueue.h"
@@ -105,3 +118,5 @@ int main() {
 
     return 0;
 }
+
+
